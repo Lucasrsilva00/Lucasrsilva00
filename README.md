@@ -1,70 +1,329 @@
-<h1>Olá, eu sou o Lucas Rodrigues Silva! 👋</h1>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skilline</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #696984;
+    }
 
-<h2>🚀 Sobre Mim</h2>
-Sou estudante do Ensino Médio Técnico em Informática na Escola SESI Camaçari (BA), com foco e paixão voltados para o desenvolvimento de software e a tecnologia da informação. Atuo como desenvolvedor em formação técnica, focado em criar soluções eficientes através de código lógico, além de possuir forte bagagem em design digital e análise de dados.
+    .btn-laranja {
+      background-color: #f48c06;
+      color: #fff;
+      border-radius: 25px;
+      padding: 10px 25px;
+      font-weight: bold;
+      border: none;
+    }
 
-Misturo lógica de programação, conceitos de Engenharia de Software e design visual para projetar interfaces inteligentes e pequenos ecossistemas digitais. Busco constantemente o crescimento técnico para, no futuro, atuar em projetos de alcance global.
+    .btn-laranja:hover {
+      background-color: #d97b00;
+      color: #fff;
+    }
 
-* 🎓 **Educação:** Cursando o Ensino Médio Técnico em Informática (Previsão de conclusão: 2027).
-* 🎯 **Foco Atual:** Engenharia de Software, Criação de Jogos Digitais e aprofundamento em Ciência de Dados.
-* 🌍 **Idiomas:** Português (Avançado) e Inglês (Avançado).
-* 💼 **Experiência:** Passagem pela Millenium como Designer Ilustrativo e Assistente de TI, e especialização em Informática Avançada pelo Senai.
+    .btn-outline-laranja {
+      border: 1px solid #f48c06;
+      color: #f48c06;
+      border-radius: 25px;
+      padding: 10px 20px;
+      background: transparent;
+    }
 
-<h2>📄 Meu Currículo</h2>
-Para conhecer mais detalhes sobre a minha trajetória profissional e acadêmica, acesse o documento completo no link abaixo:
+    .bg-hero {
+      background-color: #fff9f2;
+      padding-top: 30px;
+      padding-bottom: 60px;
+    }
 
-[![Download Currículo](https://img.shields.io/badge/Acessar%20Meu%20Curr%C3%ADculo-0078D4?style=for-the-badge&logo=microsoft-word&logoColor=white)](LINK_DO_SEU_CURRICULO_AQUI)
+    .card-recurso {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+      height: 100%;
+    }
 
-<h2>🛠️ Tecnologias e Ferramentas</h2>
+    .icone-circulo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: -40px auto 15px auto;
+    }
 
-**🕹️ Game Dev & Gamificação**
-![Scratch](https://img.shields.io/badge/Scratch-%234D97FF.svg?style=for-the-badge&logo=scratch&logoColor=white)
-![Unity](https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white) 
-![Roblox Studio](https://img.shields.io/badge/Roblox%20Studio-000000?style=for-the-badge&logo=roblox&logoColor=white)
+    footer {
+      background-color: #252641;
+      color: #fff;
+      padding: 50px 0 20px 0;
+    }
 
-**📊 Ciência de Dados, Lógica & Web**
-![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+    .input-email {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid #4f5168;
+      border-radius: 25px;
+      color: #fff;
+      padding: 10px 20px;
+    }
 
-**🎨 Edição de Imagem & Design**
-![Adobe Photoshop](https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?style=for-the-badge&logo=adobe-photoshop&logoColor=black)
-![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=canva&logoColor=white)
-![Picsart](https://img.shields.io/badge/Picsart-FF4D82?style=for-the-badge&logo=picsart&logoColor=white)
+    .input-email::placeholder {
+      color: #a0a0a0;
+    }
 
-**🧰 Produtividade**
-![Microsoft Office](https://img.shields.io/badge/Microsoft_Office-D83B01?style=for-the-badge&logo=microsoft-office&logoColor=white)
-![Google Workspace](https://img.shields.io/badge/Google_Workspace-4285F4?style=for-the-badge&logo=google-workspace&logoColor=white)
+    .input-email:focus {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
 
-<h2>🧠 Meu Arsenal de Habilidades</h2>
+  <!-- Menu -->
+  <nav class="navbar navbar-expand-lg bg-white py-3 sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio">
+        <img src="logo.png" alt="Skilline" height="35">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacao">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuNavegacao">
+        <ul class="navbar-nav ms-auto me-3 fw-semibold">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#recursos">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Nós</a></li>
+          <li class="nav-item"><a class="nav-link" href="#funcionalidades">Funcionalidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <button class="btn btn-light rounded-pill px-3">Entrar</button>
+          <button class="btn btn-laranja">Cadastrar-se</button>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-* **JavaScript & Lógica Web:** Domínio sólido da base do ecossistema JS, incluindo manipulação avançada do DOM, métodos modernos de Array (`.map()`, `.filter()`, `.reduce()`) e consumo de APIs assíncronas com `Fetch API` e `async/await`.
-* **Game Design Completo:** Experiência prática cuidando do roteiro, design de fases, mecânicas de colisões, loops de jogabilidade e testes de qualidade.
-* **UX & Gamificação:** Aplicação de sistemas de pontuação, lógica de conquistas e barras de progresso para retenção de usuários.
-* **Ciência de Dados (Em evolução):** Raciocínio lógico estruturado, introdução à automação e análise de dados com Python.
-* **Interdisciplinaridade & Soft Skills:** Pensamento crítico em projetos STEAM, liderança colaborativa, expressão criativa e inteligência emocional.
-* **Infraestrutura de TI & Suporte:** Conhecimentos práticos adquiridos no Senai envolvendo suporte técnico de software, testes de código, manutenção de computadores e configuração de redes.
-* **Análise de Dados Avançada:** Criação de planilhas inteligentes no Excel com o uso de fórmulas complexas, tabelas dinâmicas e dashboards interativos para tomadas de decisão.
+  <!-- Inicio -->
+  <section id="inicio" class="bg-hero">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <h1 class="display-5 fw-bold mb-3" style="color: #2f327d;">
+            <span style="color: #f48c06;">Estudar</span> online agora é muito mais fácil
+          </h1>
+          <p class="mb-4">
+            Skilline é uma plataforma interessante que vai te ensinar de uma forma mais interativa
+          </p>
+          <div class="d-flex align-items-center gap-3">
+            <button class="btn btn-laranja">Junte-se</button>
+            <a href="#" class="text-decoration-none text-dark fw-bold d-flex align-items-center gap-2">
+              <i class="bi bi-play-circle-fill text-info fs-3"></i> Veja como funciona
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-7 text-center">
+          <img src="garota-1.png" alt="Estudante" class="img-fluid" style="max-height: 480px;">
+        </div>
+      </div>
+    </div>
+  </section>
 
-<h2>📁 Projetos em Destaque (Em Desenvolvimento)</h2>
+  <!-- Parceiros -->
+  <section class="py-4 bg-white text-center">
+    <div class="container">
+      <p class="text-muted small text-uppercase fw-bold mb-3">Confiado por mais de 5.000 empresas em todo o mundo</p>
+      <img src="parceiros.png" alt="Parceiros" class="img-fluid" style="max-height: 30px;">
+    </div>
+  </section>
 
-**1. 🕹️ Desenvolvimento de Jogos Interativos (JavaScript)**
-* **Descrição:** Criação de clones de jogos clássicos (como *Pong* e *Snake*) e jogos de plataforma 2D para consolidação de lógica, controle de colisões, eventos e renderização em tela.
-* **O que uso:** JavaScript puro (ES6+), manipulação de elementos via DOM e lógica matemática de jogos.
+  <!-- Recursos -->
+  <section id="recursos" class="py-5 bg-light">
+    <div class="container py-3">
+      <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+        <h2 class="fw-bold" style="color: #2f327d;">
+          Software em Nuvem <span style="color: #f48c06;">Tudo-em-Um</span>
+        </h2>
+        <p>
+          Skilline é um poderoso conjunto de software online que combina todas as ferramentas necessárias para administrar uma escola ou escritório de sucesso.
+        </p>
+      </div>
 
-**2. 📊 Sistemas de Automação de Dados**
-* **Descrição:** Desenvolvimento de planilhas e relatórios inteligentes focados em controle financeiro, análise de dados de mercado e automação de inventários.
-* **O que uso:** Excel Avançado, lógica de dados e modelagem de tabelas dinâmicas.
+      <div class="row g-4 mt-2">
+        <div class="col-md-4">
+          <div class="card-recurso">
+            <div class="icone-circulo" style="background-color: #5b72ee;">
+              <img src="Group 79.png" alt="Icone" width="30">
+            </div>
+            <h5 class="fw-bold" style="color: #2f327d;">Faturamento Online, Faturamento e Contratos</h5>
+            <p class="small text-muted">Controle simples e seguro das transações financeiras e legais da sua organização. Envie faturas e contratos personalizados.</p>
+          </div>
+        </div>
 
-<h2>📊 Estatísticas do GitHub</h2>
+        <div class="col-md-4">
+          <div class="card-recurso">
+            <div class="icone-circulo" style="background-color: #f48c06;">
+              <img src="image.png" alt="Icone" width="30">
+            </div>
+            <h5 class="fw-bold" style="color: #2f327d;">Agendamento Fácil e Controle de Presença</h5>
+            <p class="small text-muted">Agende e reserve salas de aula em um campus ou em múltiplos campi. Mantenha registros detalhados da presença dos alunos.</p>
+          </div>
+        </div>
 
-<p align="left">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=SEU_USUARIO_AQUI&show_icons=true&theme=gotham&include_all_commits=true&count_private=true" alt="Estatísticas do GitHub" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SEU_USUARIO_AQUI&layout=compact&langs_count=7&theme=gotham" alt="Linguagens mais usadas" />
-</p>
+        <div class="col-md-4">
+          <div class="card-recurso">
+            <div class="icone-circulo" style="background-color: #29b6f6;">
+              <img src="Group 81.png" alt="Icone" width="30">
+            </div>
+            <h5 class="fw-bold" style="color: #2f327d;">Rastreamento de Clientes</h5>
+            <p class="small text-muted">Automatize e rastreie e-mails para indivíduos ou grupos. O sistema integrado da Skilline ajuda a organizar sua organização.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<h2>My Contact Status 👋</h2>
+  <!-- Sobre Nós -->
+  <section id="sobre" class="py-5 bg-white">
+    <div class="container py-3">
+      <div class="text-center mx-auto mb-5" style="max-width: 650px;">
+        <h2 class="fw-bold" style="color: #2f327d;">
+          O que é <span style="color: #f48c06;">Skilline?</span>
+        </h2>
+        <p>
+          Skilline é uma plataforma que permite que educadores criem aulas online, onde podem armazenar os materiais do curso; gerenciar tarefas, questionários e exames; monitorar prazos; avaliar resultados e fornecer feedback aos alunos, tudo em um só lugar.
+        </p>
+      </div>
 
-[![E-mail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lucassilvarodrigues483@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/SEU_LINKEDIN_AQUI/)
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-5">
+          <div class="position-relative rounded-4 overflow-hidden">
+            <img src="Group 22.png" alt="Instrutores" class="w-100 img-fluid">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center text-white" style="background: rgba(0,0,0,0.3);">
+              <h4 class="fw-bold">PARA INSTRUTORES</h4>
+              <button class="btn btn-outline-light rounded-pill mt-2">Comece uma aula hoje</button>
+            </div>
+          </div>
+        </div>
 
-*"Toda carreira tem um começo. A sua começa aqui!"*
+        <div class="col-md-5">
+          <div class="position-relative rounded-4 overflow-hidden">
+            <img src="Group 23.png" alt="Estudantes" class="w-100 img-fluid">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center text-white" style="background: rgba(0,0,0,0.3);">
+              <h4 class="fw-bold">PARA ESTUDANTES</h4>
+              <button class="btn btn-info text-white rounded-pill mt-2">Digite o código de acesso</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Funcionalidades -->
+  <section id="funcionalidades" class="py-5 bg-light">
+    <div class="container py-3">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+          <img src="Group 5396.png" alt="Interface" class="img-fluid rounded-4">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-4" style="color: #2f327d;">
+            Uma interface de usuário projetada para a sala de aula
+          </h2>
+          
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <i class="bi bi-grid-fill fs-4 text-primary"></i>
+            <p class="m-0">Os professores não se perdem na visualização em grade e têm um espaço dedicado no Pódio.</p>
+          </div>
+
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <i class="bi bi-easel-fill fs-4 text-warning"></i>
+            <p class="m-0">Os TA's e apresentadores podem ser movidos para a frente da sala.</p>
+          </div>
+
+          <div class="d-flex align-items-start gap-3">
+            <i class="bi bi-people-fill fs-4 text-info"></i>
+            <p class="m-0">Os professores podem ver facilmente todos os alunos e os dados da turma ao mesmo tempo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="py-5 bg-white">
+    <div class="container py-3">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <span class="text-uppercase text-muted small fw-bold">Depoimento</span>
+          <h2 class="fw-bold my-3" style="color: #2f327d;">O que eles dizem?</h2>
+          <p>
+            Skilline recebeu mais de 100 mil avaliações positivas de nossos usuários ao redor do mundo. Alguns dos alunos e professores foram grandemente ajudados pelo Skilline.
+          </p>
+          <p>E você também? Por favor, dê sua avaliação</p>
+          <button class="btn btn-outline-laranja mt-2">
+            Escreva sua avaliação <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="col-lg-7 text-center">
+          <img src="Group 5397.png" alt="Depoimento" class="img-fluid rounded-4" style="max-height: 420px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container text-center">
+      <div class="d-flex justify-content-center align-items-center gap-3 mb-4">
+        <img src="Group 115.png" alt="Skilline" height="30">
+        <span class="text-secondary">|</span>
+        <span class="text-light">Aula Virtual para Zoom</span>
+      </div>
+
+      <p class="fw-bold mb-3">Inscreva-se para receber nosso Newsletter</p>
+
+      <!-- Formulario exigido pelo professor -->
+      <form id="formInscricao" class="d-flex justify-content-center gap-2 mx-auto mb-4" style="max-width: 450px;">
+        <input type="email" id="campoEmail" class="form-control input-email" placeholder="Seu Email" required>
+        <button type="submit" class="btn btn-primary rounded-pill px-4" style="background-color: #545be8; border: none;">Inscreva-se</button>
+      </form>
+
+      <div class="d-flex justify-content-center gap-3 small mb-4">
+        <a href="#" class="text-decoration-none text-secondary">Carreiras</a>
+        <span class="text-secondary">|</span>
+        <a href="#" class="text-decoration-none text-secondary">Política de Privacidade</a>
+        <span class="text-secondary">|</span>
+        <a href="#" class="text-decoration-none text-secondary">Termos e Condições</a>
+      </div>
+
+      <p class="text-secondary small m-0">© 2026 Class Technologies Inc.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Script do requisito 3 do professor
+    document.getElementById('formInscricao').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      var email = document.getElementById('campoEmail').value;
+      alert('Email "' + email + '" inscrito com sucesso');
+      
+      document.getElementById('campoEmail').value = '';
+    });
+  </script>
+</body>
+</html>
